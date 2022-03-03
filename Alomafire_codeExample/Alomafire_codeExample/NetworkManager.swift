@@ -11,17 +11,24 @@ class NetworkManager {
     
     static let shared  =  NetworkManager()
 
-      func fetchFilms() {
-        guard let url =  URL(string: "https://swapi.dev/api/films") else  {return}
+    var model : [Films] = []
+   
+    
+    func fetchFilms(completion : @escaping  (([Films]) -> Void)) {
+        guard let url =  URL(string: "https://swapi.dev/api/films") else  {return }
         // 1
         AF.request(url).validate()
-        .responseDecodable(of : Films.self) { response in
+            .responseDecodable(of : Films.self) { [weak self] response in
             
             guard let response =  response.value else {
                 print ("something went wrong")
                 return
             }
-            print(response.results[0].title)
+                self?.model = [response]
+                print(response.results[0].title)
+                completion([response])
+                
+
         }
         
         
