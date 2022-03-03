@@ -14,6 +14,9 @@
 		28B3C60D27D0C62500966BC5 /* Alomafire_codeExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28B3C60B27D0C62500966BC5 /* Alomafire_codeExample.xcdatamodeld */; };
 		28B3C60F27D0C62600966BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28B3C60E27D0C62600966BC5 /* Assets.xcassets */; };
 		28B3C61227D0C62600966BC5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28B3C61027D0C62600966BC5 /* LaunchScreen.storyboard */; };
+		28B3C61F27D0C71C00966BC5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B3C61E27D0C71C00966BC5 /* NetworkManager.swift */; };
+		28B3C62227D0C8B400966BC5 /* FilmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B3C62127D0C8B400966BC5 /* FilmModel.swift */; };
+		5F5F8CD01BCE7AC7B6F627EB /* libPods-Alomafire_codeExample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF3E930E26E561DDF3308B7 /* libPods-Alomafire_codeExample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,11 @@
 		28B3C60E27D0C62600966BC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28B3C61127D0C62600966BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28B3C61327D0C62600966BC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28B3C61E27D0C71C00966BC5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		28B3C62127D0C8B400966BC5 /* FilmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmModel.swift; sourceTree = "<group>"; };
+		4858035776A158AE43000180 /* Pods-Alomafire_codeExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alomafire_codeExample.debug.xcconfig"; path = "Target Support Files/Pods-Alomafire_codeExample/Pods-Alomafire_codeExample.debug.xcconfig"; sourceTree = "<group>"; };
+		BD9E86B5B5B73074E5C62A92 /* Pods-Alomafire_codeExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Alomafire_codeExample.release.xcconfig"; path = "Target Support Files/Pods-Alomafire_codeExample/Pods-Alomafire_codeExample.release.xcconfig"; sourceTree = "<group>"; };
+		BDF3E930E26E561DDF3308B7 /* libPods-Alomafire_codeExample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Alomafire_codeExample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5F5F8CD01BCE7AC7B6F627EB /* libPods-Alomafire_codeExample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,8 @@
 			children = (
 				28B3C60127D0C62500966BC5 /* Alomafire_codeExample */,
 				28B3C60027D0C62500966BC5 /* Products */,
+				D1826EEF1183CD9909996F21 /* Pods */,
+				6627AFC9087B2E6340A5251C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,8 +77,27 @@
 				28B3C61027D0C62600966BC5 /* LaunchScreen.storyboard */,
 				28B3C61327D0C62600966BC5 /* Info.plist */,
 				28B3C60B27D0C62500966BC5 /* Alomafire_codeExample.xcdatamodeld */,
+				28B3C61E27D0C71C00966BC5 /* NetworkManager.swift */,
+				28B3C62127D0C8B400966BC5 /* FilmModel.swift */,
 			);
 			path = Alomafire_codeExample;
+			sourceTree = "<group>";
+		};
+		6627AFC9087B2E6340A5251C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BDF3E930E26E561DDF3308B7 /* libPods-Alomafire_codeExample.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D1826EEF1183CD9909996F21 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4858035776A158AE43000180 /* Pods-Alomafire_codeExample.debug.xcconfig */,
+				BD9E86B5B5B73074E5C62A92 /* Pods-Alomafire_codeExample.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,6 +107,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 28B3C61627D0C62600966BC5 /* Build configuration list for PBXNativeTarget "Alomafire_codeExample" */;
 			buildPhases = (
+				90ED82B5A8E052B53E695649 /* [CP] Check Pods Manifest.lock */,
 				28B3C5FB27D0C62500966BC5 /* Sources */,
 				28B3C5FC27D0C62500966BC5 /* Frameworks */,
 				28B3C5FD27D0C62500966BC5 /* Resources */,
@@ -135,13 +166,40 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		90ED82B5A8E052B53E695649 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Alomafire_codeExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28B3C5FB27D0C62500966BC5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				28B3C60D27D0C62500966BC5 /* Alomafire_codeExample.xcdatamodeld in Sources */,
+				28B3C62227D0C8B400966BC5 /* FilmModel.swift in Sources */,
 				28B3C60727D0C62500966BC5 /* ViewController.swift in Sources */,
+				28B3C61F27D0C71C00966BC5 /* NetworkManager.swift in Sources */,
 				28B3C60327D0C62500966BC5 /* AppDelegate.swift in Sources */,
 				28B3C60527D0C62500966BC5 /* SceneDelegate.swift in Sources */,
 			);
@@ -287,6 +345,7 @@
 		};
 		28B3C61727D0C62600966BC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4858035776A158AE43000180 /* Pods-Alomafire_codeExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +364,7 @@
 		};
 		28B3C61827D0C62600966BC5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD9E86B5B5B73074E5C62A92 /* Pods-Alomafire_codeExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
