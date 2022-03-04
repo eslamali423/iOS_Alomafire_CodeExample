@@ -8,41 +8,40 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+   
+    
     
     @IBOutlet weak var tableView: UITableView!
-  var model = [Films]()
+  //var model = [Film]()
+    var model =  [User] ()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         // Do any additional setup after loading the view.
         
-        NetworkManager.shared.fetchFilms { response in
+        NetworkManager.shared.fetchDeta{response in
             self.model = response
-            print( self.model[0].results[0].title)
+            print("this is the VIEWDIDLOAD Response :::::: \(response)")
             
-        }
-      
-        //print(model.count)
-        DispatchQueue.main.async {
+            print(self.model[0].name)
             self.tableView.reloadData()
             
         }
         
-        
-        
     }
-    
+    // table 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.model.count
+        return 10
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let data =  model[indexPath.row].results[indexPath.row]
-        cell.textLabel?.text = data.title
-        cell.detailTextLabel?.text = data.producer
+//        let data =  model[0].name
+//        cell.textLabel?.text = data.name
+//        cell.detailTextLabel?.text = data.email
+        cell.textLabel?.text = "eslam"
         DispatchQueue.main.async {
-            self.tableView.reloadData()
+            tableView.reloadData()
             
         }
         
@@ -53,5 +52,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     
-}
 
+
+}
